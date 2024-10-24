@@ -1,5 +1,7 @@
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+nested_list = [[1, 2, 3], [4, 5], [6, 7, 8, 9]]
+
 fruits = ['apple', 'banana', 'cherry', 'date', 'elderberry']
 
 students = [
@@ -34,8 +36,18 @@ def time_five(num):
 
 # print(snumbers)
 
-tuples = [tuple((i, i * i)) for i in numbers]
+#tuples = [tuple((i, i * i)) for i in numbers]
 
-cumulatives = [sum(numbers[:i + 1]) for i in range(len(numbers))]
+#cumulatives = [sum(numbers[:i + 1]) for i in range(len(numbers))]
 
-print(cumulatives)
+#results = [i * 2 for i in numbers if i % 2 == 0]
+
+flat = []
+
+for i in nested_list:
+    for j in i:
+        flat.append(j)
+
+flat_list = [j for i in nested_list for j in i]
+
+print(flat_list)
